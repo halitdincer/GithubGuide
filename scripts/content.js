@@ -4,8 +4,9 @@ var sample_raw_data = ["Description for first row item",
    "Description for third row item",
    "Description for fourth row item"] ;
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
+   // Slice the last part of the current url
    var url_ext = document.location.href.slice(19) ;
 
    // Make api call to server with url extension
