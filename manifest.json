@@ -14,7 +14,7 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "https://github.com/*"
+        "https://github.com/*/*"
       ]
     }
   ]
