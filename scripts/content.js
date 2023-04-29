@@ -5,7 +5,7 @@ $( document ).ready(function() {
       //alert($(this).find(".Link--primary").text());
       $(this).append("<div role='gridcell' class='repo-explainer-grid' >  \
          <span class='repo-explainer-link'> Detail </span> \
-         <span class='repo-explainer-hover-text'> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </span> </div>");
+         <span class='repo-explainer-hover-text'>" + "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem" +"</span> </div>");
 
    });
 
@@ -17,7 +17,7 @@ $( document ).ready(function() {
       processData: false,
       data: $.param({'url_ext' : url_ext }),
       success: function(resp){
-         
+
  
       }
    });
@@ -26,12 +26,6 @@ $( document ).ready(function() {
 
 
 });
-
-
-
-
-
-
 
 // var chat_data = JSON.stringify({
 //    "model": "gpt-3.5-turbo",
