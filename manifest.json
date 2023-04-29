@@ -12,10 +12,12 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "css" : ["styles/style.css"],
+      "js": ["scripts/jquery.js", "scripts/content.js"],
       "matches": [
         "https://github.com/*/*"
       ]
     }
   ]
+  
 }

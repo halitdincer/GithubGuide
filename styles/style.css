@@ -1,0 +1,44 @@
+.repo-explainer-link{
+    color:grey;
+    margin-left: 16px;
+}
+
+.repo-explainer-grid{
+  position: relative;
+  display: inline-block;
+}
+
+.repo-explainer-hover-text{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    top: -15px;
+    right: 105%;
+}
+/* .repo-explainer-hover-text:after{
+
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; 
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+
+} */
+
+.repo-explainer-grid:hover .repo-explainer-hover-text{
+    visibility: visible;
+}
+.repo-explainer-grid:hover .repo-explainer-link{
+    color:blue;
+}
