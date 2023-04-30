@@ -1,6 +1,10 @@
 .repo-explainer-link{
     color:grey;
     margin-left: 16px;
+
+    -webkit-transition: color 300ms linear;
+    -ms-transition: color 300ms linear;
+    transition: color 300ms linear;
 }
 
 .repo-explainer-grid{
@@ -40,5 +44,9 @@
     visibility: visible;
 }
 .repo-explainer-grid:hover .repo-explainer-link{
-    color:blue;
+    color: rgb(197, 165, 121);
+
+    -webkit-transition: color 300ms linear;
+    -ms-transition: color 300ms linear;
+    transition: color 300ms linear;
 }

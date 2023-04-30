@@ -8,7 +8,7 @@ var intervalId = window.setInterval(function(){
    
    if (!$(".repo-explainer-grid").length){
 
-         // Slice the last part of the current url
+   // Slice the last part of the current url
    var url_ext = document.location.href.slice(19) ;
 
    // Make api call to server with url extension
@@ -30,7 +30,7 @@ var intervalId = window.setInterval(function(){
            else {
                // if it does exist, append 'Detail' element with description
                $(this).append("<div role='gridcell' class='repo-explainer-grid' >  \
-               <span class='repo-explainer-link'> Detail </span> \
+               <span class='repo-explainer-link'> [Info] </span> \
                <span class='repo-explainer-hover-text'>" + sample_raw_data[index]  +"</span> </div>");
            }
 
@@ -45,7 +45,7 @@ var intervalId = window.setInterval(function(){
    }
 
 
-}, 5000);
+}, 1000);
 
 
 
