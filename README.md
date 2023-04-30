@@ -26,7 +26,3 @@ io (folder)       : Contains classes and auxiliary code for I/O operations
 ## Contributing
 
 Contributions are always welcome! If you'd like to contribute, please fork the repository and create a pull request with your changes. Before submitting your pull request, please ensure that your code includes tests for any new functionality.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
