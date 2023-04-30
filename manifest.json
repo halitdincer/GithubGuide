@@ -15,8 +15,14 @@
       "js": ["scripts/jquery.js", "scripts/content.js"],
       "matches": [
         "https://github.com/*/*"
+      ],
+      "exclude_matches":[
+        "https://github.com/*/*.py"
       ]
     }
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
   ]
   
 }

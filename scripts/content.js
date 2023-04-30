@@ -5,30 +5,28 @@ var sample_raw_data = ["Description for first row item",
    "Description for fourth row item"] ;
 
 var intervalId = window.setInterval(function(){
-   
-   if (!$(".repo-explainer-grid").length){
 
    // Slice the last part of the current url
    var url_ext = document.location.href.slice(19) ;
-
+   
+   if (!(url_ext.slice(-3)===".py") && !$(".repo-explainer-grid").length){
    // Make api call to server with url extension
    $.ajax({
-      type: 'GET',
-      // TODO: this is a placeholder url, replace with actual one
-      url: 'https://raw.githubusercontent.com/pandas-dev/pandas/main/scripts/check_test_naming.py',
-      data: $.param({'url_ext' : url_ext }),
-
+      method: 'GET',
+      url: 'http://127.0.0.1:5000/' + url_ext,
       // On call success
       success: function(resp){
 
+         var index = 0;
          // Iterate through each box-row in files
-         $("[aria-labelledby='files']").children('.Box-row').each(function (index) {
+         $("[aria-labelledby='files']").children('.Box-row').each(function () {
 
-            if(!(typeof sample_raw_data[index] === 'undefined') && !($(this).find(".js-navigation-open[title='Go to parent directory']").length) ) {
+            if(!(typeof resp[index] === 'undefined') && !($(this).find(".js-navigation-open[title='Go to parent directory']").length) ) {
                // if it does exist, append 'Detail' element with description
                $(this).append("<div role='gridcell' class='repo-explainer-grid' >  \
                <span class='repo-explainer-link'> [Info] </span> \
-               <span class='repo-explainer-hover-text'>" + sample_raw_data[index]  +"</span> </div>");
+               <span class='repo-explainer-hover-text'>" + resp[index]  +"</span> </div>");
+               index = index + 1 ;
            }
 
          });
@@ -39,6 +37,9 @@ var intervalId = window.setInterval(function(){
       }
    });
 
+   }
+   else if(url_ext.slice(-3)===".py"){
+      
    }
 
 
