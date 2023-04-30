@@ -1,0 +1,1 @@
+The code file provides instructions for setting up, running, and debugging integration tests for Pyircd using the irctest repository. It includes a custom controller for Pyircd and additional tests to cover core IRC functionality.

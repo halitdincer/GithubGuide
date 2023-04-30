@@ -1,0 +1,1 @@
+This code file contains a series of tests for an IRC message parser, with various scenarios such as commands with parameters, no parameters, empty trailing parameters, and special characters. Each test case includes a description, an expected "atoms" dictionary, and a raw message that should match the expected atoms.

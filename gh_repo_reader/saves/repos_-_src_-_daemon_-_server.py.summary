@@ -1,0 +1,1 @@
+The code file contains a Server class responsible for managing client connections, handling socket connections with clients, and dispatching messages to a parser. The server class continuously checks if in_buffer for any socket has data and writes such data to the client.
