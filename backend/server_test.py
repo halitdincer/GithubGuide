@@ -1,6 +1,9 @@
-from flask import Flask
+from flask import Flask, request, make_response, jsonify
+from summarizer import get_summaries_for_given_path, setup
 
 app = Flask(__name__)
+
+HAS_BEEN_SET_UP = set()
 
 @app.route('/halitdincer/negate/tree/main/scripts')
 def negate_scripts():
@@ -29,3 +32,36 @@ def negate():
         "This HTML code is for the Negate browser extension's popup interface. It includes a title, a styled toggle switch, and a label to enable or disable the 'Block Negativity' feature. It also loads an external JavaScript file (popup.js) to handle the functionality of the toggle switch.",
         "The manifest file for the Negate browser extension provides essential details including its name, description, and version. It specifies icons, permissions, and the default popup and icon for the extension. It also lists the content security policy and content scripts, including CSS and JavaScript files, to be injected into webpages."
     ]
+
+# @app.route('/setup')
+# def set_up_for_repo():
+#     url = request.args.get('url')
+#     print("[SETUP] URL:", url)
+#     setup(url)
+#     resp = make_response(
+#             jsonify(
+#                 {"message": f"Setup success!"}
+#             ),
+#             200,
+#         )
+#     return resp
+
+@app.route('/repo')
+def get_summaries():
+    # Fetch query parameters from URL using request.args.get()
+    url = request.args.get('url')
+    print("[SETUP] URL:", url)
+    if '/tree/main' in url:
+        base = url.split('/tree/main')[0]
+    else:
+        lst = url.split('/')[:5]
+        base = '/'.join(lst)
+    if base not in HAS_BEEN_SET_UP:
+        setup(base)
+        HAS_BEEN_SET_UP.add(base)
+    # Call the summarizer function
+    summaries = get_summaries_for_given_path(url)
+    return summaries
+
+if __name__ == '__main__':
+    setup()
