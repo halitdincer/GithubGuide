@@ -25,8 +25,9 @@
 .repo-explainer-hover-text{
     visibility: hidden;
     width: 320px;
-    background-color: black;
-    color: #fff;
+    background-color: #161b22;
+    border: solid 1px #30363d;
+    color: #e6edf3;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
