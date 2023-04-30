@@ -1,6 +1,3 @@
-
-![githubguide banner](./images/banner.jpg)
-
 # GithubGuide
 
 GithubGuide is a command-line tool that can take in any GitHub repository as input and produce explanations of what each file and folder is for in the repository.
