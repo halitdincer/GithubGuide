@@ -1,0 +1,1 @@
+The given code defines a MessageBus class responsible for handling parsed messages sent by a parser. It includes methods to handle messages, dispatch messages to clients, create new clients, and retrieve clients based on their address.

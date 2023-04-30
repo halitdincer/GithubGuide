@@ -1,0 +1,1 @@
+The code file contains tests for `parser.py`, which is responsible for parsing IRC messages. The tests can be run using the command `poetry run pytest src/test/parser_tests/` and are adapted from the ircdocs project.

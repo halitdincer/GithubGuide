@@ -1,0 +1,1 @@
+The code file defines a Parser class that is responsible for parsing IRC messages according to the IRC specifications. The Parser class takes in a Message object, parses the message, creates a new Message object with command and parameter fields, and dispatches the Message to the EventBus.

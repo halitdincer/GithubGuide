@@ -1,0 +1,1 @@
+The code file is part of an IRC server implementation and defines the "Client" class, which handles various IRC commands and messages. It includes methods for handling commands like JOIN, PART, PING, and QUIT, as well as managing registered clients and channels.
