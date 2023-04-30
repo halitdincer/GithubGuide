@@ -1,0 +1,1 @@
+The code file holds global variables to be shared across modules and provides an init function to initialize the server name. The init function should only be called by the daemon module.

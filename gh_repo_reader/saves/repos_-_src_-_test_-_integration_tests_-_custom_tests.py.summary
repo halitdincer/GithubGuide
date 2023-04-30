@@ -1,0 +1,1 @@
+The code file contains custom tests for an IRC server, specifically for implementing functionality that was not covered by the irctest repo. The tests include scenarios like sending a private message to a user and sending a private message to a nonexistent user.
