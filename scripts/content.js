@@ -24,10 +24,7 @@ var intervalId = window.setInterval(function(){
          // Iterate through each box-row in files
          $("[aria-labelledby='files']").children('.Box-row').each(function (index) {
 
-            if(typeof sample_raw_data[index] === 'undefined') {
-               // if it does not exist, do nothing
-           }
-           else {
+            if(!(typeof sample_raw_data[index] === 'undefined') && !($(this).find(".js-navigation-open[title='Go to parent directory']").length) ) {
                // if it does exist, append 'Detail' element with description
                $(this).append("<div role='gridcell' class='repo-explainer-grid' >  \
                <span class='repo-explainer-link'> [Info] </span> \
