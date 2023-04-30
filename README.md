@@ -3,7 +3,7 @@
 
 # GithubGuide
 
-GithubGuide is a command-line tool that can take in any GitHub repository as input and produce explanations of what each file and folder is for in the repository.
+GithubGuide is a Google Chrome extension that can take in any GitHub repository as input and produce explanations of what each file and folder is for in the repository.
 The Chrome extension is built with JavaScript, and uses the GitHub API to fetch repository contents and metadata.
 Repositories are read into our chosen LLM ChatGPT using a reader built on [LLaMa](https://pypi.org/project/llama-index/), which is a connector between LLMs and external data.
 
