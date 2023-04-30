@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Repo Explainer",
-  "version": "1.0",
-  "description": "....",
+  "name": "GithubGuide",
+  "version": "2.0",
+  "description": "GithubGuide is a Chrome extension that uses artificial intelligence to provide explanations for every folder and file in a GitHub repository. With GithubGuide, users can easily navigate complex codebases and gain a better understanding of the purpose and functionality of each file and folder.",
 
   "icons": {
     "16": "images/icon-16.png",
